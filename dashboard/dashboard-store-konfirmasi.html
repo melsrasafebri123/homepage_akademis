@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+     <!-- Icons -->
+     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <title>Store | Akademis.id</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        body {
+        font-family: 'Poppins', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        color: #152C5B;
+      }
+      .nav {
+        width: 20%;
+        min-width: 300px;
+        background-color: #E7F2F6;
+        height: 100vh;
+      }
+
+      .nav-button {
+        display: none !important;
+      }
+      .content {
+        width: 80%;
+        padding: 1.5em;
+      }
+
+      .btn-primary {
+        background-color : #60C1E7;
+        border-color: #60C1E7;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+      .btn-primary:hover {
+        background-color : #152C5B;
+      }
+      
+      .btn-secondary {
+        background-color : white;
+        border-color: white;
+        font-size: 16px;
+        color: #838383;
+        border-radius: 10px;
+      }
+      .btn-outline-secondary {
+        border-color: #838383;
+        border-radius: 10px;
+      }
+
+      .name {
+        margin-top: 1em;
+        font-size: 1.5em;
+      }
+      .sub {
+        font-size: .8em; 
+      }
+      .major {
+        font-size: 1.2em;
+      }
+      .imgsize {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 1441px) {
+            .imgsize {
+                height: 240px;
+                width: 240px;
+            }
+        }
+        
+      @media only screen and (max-width: 1440px) {
+        .imgsize {
+          height: 165px;
+          width: 165px;
+        }
+        .name {
+          font-size: 16px;
+        }
+        .sub {
+          font-size: 12px; 
+        }
+        .major {
+          font-size: 14px;
+        }
+      }
+
+      @media only screen and (max-width: 980px) {
+        .imgsize {
+          height: 155px;
+          width: 155px;
+        }
+      }
+      @media only screen and (max-width: 700px) {
+        .imgsize {
+            height: 0;
+            width: 0;    
+        }
+        .nav {
+          overflow: hidden;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          height: 83px;
+          min-width: fit-content;
+        }
+
+        .btn {
+          font-size: 25px;
+        }
+
+        .sticky-top {
+          top: auto;
+        }
+
+        .icon-collapse {
+          display:block !important;
+        }
+        .nav-button {
+          display: flex !important;
+        }
+
+        .profile, .nav-text {
+          display: none !important;
+        }
+
+        .content {
+          width: 100%;
+        }
+      }
+
+        /* Konfirmasi */
+        .containerDashboard,
+        .containerVC,
+        .containerTryout,
+        .containerStore,
+        .containerProfile,
+        .containerSettings {
+            background-color: #F7F8F7;
+            padding-left: 40px;
+            border-radius: 10px;
+            margin-bottom: 22px;
+        }
+
+        .containerLogout {
+            border: 1px solid #838383;
+            padding-left: 40px;
+            border-radius: 10px;
+            margin-bottom: 22px;
+            margin-top: 35px;
+        }
+
+        .containerDashboard:hover,
+        .containerVC:hover,
+        .containerTryout:hover,
+        .containerStore:hover,
+        .containerProfile:hover,
+        .containerSettings:hover,
+        .containerLogout:hover {
+            background-color: #60C1E7;
+        }
+
+        .containerDashboard span:hover,
+        .containerVC span:hover,
+        .containerTryout span:hover,s
+        .containerStore span:hover,
+        .containerProfile span:hover,
+        .containerSettings span:hover,
+        .containerLogout span:hover {
+            color: white;
+        }
+
+        .containerStore:active {
+            background-color: #60C1E7;
+        }
+
+        .title .formulir {
+            margin-left: 385px;
+            margin-right: 250px;
+        }
+
+        .title .submitBtn {
+            margin-left: 385px;
+            margin-right: 250px;
+            width: 58%;
+            background-color: #152C5B;
+        }
+
+        .title .submitBtn:hover {
+            margin-left: 385px;
+            margin-right: 250px;
+            width: 58%;
+            background-color: #001642;
+        }
+
+        .title h1 {
+            font-size: 36px;
+            margin-left: 150px;
+            font-weight: 600;
+            color: #152C5B;
+        }
+
+        .title .form-label {
+            color: #152C5B;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        .title .form-control {
+            background-color: #F7F8F7;
+            border: none;
+        }
+
+        .title .metodePembayaran {
+            background-color: #F7F8F7;
+            color: lightgray;
+            width: 100%;
+        }
+
+        .title .metodePembayaran:hover {
+            background-color: #F7F8F7;
+            color: #838383;
+        }
+
+        /* RESPONSIVE */
+        
+        @media screen and (max-width: 1024px){
+            .wrapper{
+                display: none;
+            }
+            .title h1{
+                margin-left: 0;
+            }
+
+            .formulir, .submitBtn{
+                width: 500px !important;
+                margin-left: 20px !important;
+            }
+
+        }
+
+        @media screen and (max-width: 750px){
+
+            body{
+                overflow-x: hidden !important;
+            }
+
+            .title{
+                overflow-x: hidden !important;
+                overflow-y: hidden;
+            }
+
+            .wrapper{
+                display: none;
+            }   
+
+            .title h1{
+                font-size: 20px;
+                margin-left: 20px !important;
+                margin-right: 20px !important;
+            }
+
+            .title .formulir{
+                margin-left: 10px;
+            }
+
+            .formulir .namaLbl{
+                font-size: 14px;
+            }
+
+            .formulir .metodePembayaran{
+                font-size: 10px !important;
+            }
+
+            .formulir .inputTxt, .metodePembayaran{
+                width: 270px !important;
+            }
+
+            .submitBtn{
+                margin-left: 10px !important;
+                width: 270px !important;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+  <div class="nav d-flex align-items-center p-3 sticky-top">
+    <div class="profile d-flex flex-column align-items-center" style="width: 100%">
+      <img src="../assets/city.jpg" class="rounded-circle imgsize" alt="..." />
+      <h5 class="mt-2 text-center name" style="color:#152c5b; font-weight: 600;">Anggara Bima Surya</h5>
+      <p class="text-center sub" style="color:#BDBCBC; font-weight: bold; margin-bottom: 5px">JURUSAN IMPIAN</p>
+      <p class="text-center major" style="color:#838383;margin-bottom: 1px;">Teknik Informatika</p>
+      <p class="text-center major" style="color:#838383; margin-bottom: 1em">Universitas Indonesia</p>
+    </div>
+    <div class="nav-text d-flex flex-column align-items-center" style="width: 100%">
+      <a class="btn btn-secondary p-2 mb-2" href="dashboard.html"  style="width: 100%; display: block; text-align:left; padding-left: 4.5vw !important;">
+        <i class="bx bxs-dashboard icon-collapse" style="padding-right: 1.1em"></i> Dashboard
+      </a>
+      <a class="btn btn-secondary p-2 mb-2" href="dashboard-virtual-class.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+        <span class="iconify icon-collapse" data-icon="ri-artboard-fill" data-inline="false" style="margin-right: 1.1em"></span> Virtual Class
+      </a>
+      <a class="btn btn-secondary p-2 mb-2" href="dashboard-tryout.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+        <span class="iconify icon-collapse" data-icon="ic-baseline-class" data-inline="false" style="margin-right: 1.1em"></span> Tryout
+      </a>
+      <a class="btn btn-primary p-2 mb-2" href="dashboard-store.html" style="width: 100%; display: block; text-align:left; padding-left: 4.5vw !important;">
+        <span class="iconify icon-collapse" data-icon="fa-solid:store-alt" data-inline="false"  style="margin-right: 1em"></span> Store
+      </a>
+      <a class="btn btn-secondary p-2 mb-2" href="dashboard-profile.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+        <i class="bi bi-person-fill icon-collapse" style="padding-right: 1.1em"></i> Profile
+      </a>
+      <a class="btn btn-secondary p-2 mb-2" href="dashboard-edit-profile.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+        <i class="bi bi-gear-fill icon-collapse"  style="padding-right: 1.1em"></i> Settings
+      </a>
+      <a class="btn btn-outline-secondary p-2 mb-2" href="dashboard-edit-profile.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+        <span class="iconify icon-collapse" data-icon="ic-baseline-logout" data-inline="false"  style="margin-right: 1.1em"></span> Logout
+      </a>
+    </div>
+
+    <!-- Mobile View Only -->
+    <div class="nav-button flex-row mx-auto">
+      <a class="btn btn-secondary mx-3" href="dashboard.html"  style="width: 100%; display: block;">
+        <i class="bx bxs-dashboard"></i>
+      </a>
+      <a class="btn btn-secondary mx-3" href="dashboard-virtual-class.html" style="width: 100%; display: block;">
+        <span class="iconify" data-icon="ri-artboard-fill" data-inline="false"></span>
+      </a>
+      <a class="btn btn-secondary mx-3" href="dashboard-tryout.html" style="width: 100%; display: block;">
+        <span class="iconify" data-icon="ic-baseline-class" data-inline="false"></span>
+      </a>
+      <a class="btn btn-primary mx-3" href="dashboard-store.html" style="width: 100%; display: block;">
+        <span class="iconify" data-icon="fa-solid:store-alt" data-inline="false"></span>
+      </a>
+      <a class="btn btn-secondary mx-3" href="dashboard-profile.html" style="width: 100%; display: block;">
+        <i class="bi bi-person-fill"></i>
+      </a>
+    </div>
+  </div>
+
+      <div class="content">
+        <!-- Content START -->
+        <h2 style="font-weight: 700">Konfirmasi Pembayaran Virtual Class</h1>
+        <form class="mt-5 px-5">
+            <div class="mb-4 formulir">
+                <label for="exampleInputEmail1" class="form-label namaLbl">Email</label>
+                <input type="email" class="form-control inputTxt" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-4 formulir">
+                <label for="exampleInputEmail1" class="form-label namaLbl">Harga</label>
+                <input type="email" class="form-control inputTxt" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-4 formulir">
+                <label for="exampleInputEmail1" class="form-label namaLbl">Metode Pembayaran</label>
+                <div class="dropdown">
+                    <button class="metodePembayaran btn dropdown-toggle btn-outline-secondary" type="button" id="dropdownMenuButton1"
+                        data-toggle="dropdown" aria-expanded="false">Pilih Metode Pembayaran
+                        yang kamu inginkan
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">GoPay ke 087776361061</a></li>
+                        <li><a class="dropdown-item" href="#">OVO ke 087776361061</a></li>
+                        <li><a class="dropdown-item" href="#">BCA ke 7751052034</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-4 formulir d-flex flex-column">
+                <label for="exampleInputEmail1" class="form-label namaLbl">Upload Bukti Pembayaran :</label>
+                <div class="mb-3">
+                    <input class="form-control" type="file" id="formFile" accept="image/*">
+                </div>
+                <div class="mt-5 d-flex justify-content-center" style="width: 100%">
+                    <button type="submit" class="btn btn-primary align-self-center" style="width: 80%">Submit</button>
+                </div>
+            </div>
+        </form>
+        <!-- CONTENT END -->
+      </div>
+
+    
+    
+    
+
+</body>
+
+</html>

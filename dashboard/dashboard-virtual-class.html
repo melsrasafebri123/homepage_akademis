@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <style>
+      h1, h5 {
+        font-weight: 700;
+      }
+      h4 {
+        font-weight: 600;
+      }
+
+      .current-vc {
+        padding-left: 0;
+      }
+
+      .icon {
+        color : #60C1E7;
+        font-size: 20px;
+      }
+
+      .card {
+        background-color: #F7F8F7;
+        border: none;
+        border-radius: 20px;
+      }
+      .scrolling-wrapper-flexbox {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      .scrolling-wrapper-flexbox::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+      }
+
+      .scrolling-wrapper-flexbox .card {
+        flex: 0 0 auto;
+      }
+
+      .badge-primary, .badge-orange {
+        background-color : #60C1E7;
+        border-radius: 90px;
+        padding: 5px;
+        width: 7em;
+        margin-bottom: 1em;
+      }
+
+      .badge-orange {
+        background-color : #E79160;
+      }
+
+      .badge-danger {
+        background-color : #E76060;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        border-radius: 90px;
+        padding: 5px;
+        width: 5em;
+      }
+
+      .profile-container {
+        width: 63px;
+        height: 63px;
+        border-radius: 10px;
+        background-color : darkgray;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        color: #152C5B;
+      }
+      .nav {
+        width: 20%;
+        min-width: 300px;
+        background-color: #E7F2F6;
+        height: 100vh;
+      }
+
+      .nav-button {
+        display: none !important;
+      }
+      .content {
+        width: 80%;
+        padding: 1.5em;
+      }
+
+      .btn-primary {
+        background-color : #60C1E7;
+        border-color: #60C1E7;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+      .btn-primary:hover {
+        background-color : #152C5B;
+      }
+      
+      .btn-secondary {
+        background-color : white;
+        border-color: white;
+        font-size: 16px;
+        color: #838383;
+        border-radius: 10px;
+      }
+      .btn-outline-secondary {
+        border-color: #838383;
+        border-radius: 10px;
+      }
+
+      .name {
+        margin-top: 1em;
+        font-size: 1.5em;
+      }
+      .sub {
+        font-size: .8em; 
+      }
+      .major {
+        font-size: 1.2em;
+      }
+      .imgsize {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 1441px) {
+            .imgsize {
+                height: 240px;
+                width: 240px;
+            }
+        }
+        
+      @media only screen and (max-width: 1440px) {
+        .imgsize {
+          height: 165px;
+          width: 165px;
+        }
+        .name {
+          font-size: 16px;
+        }
+        .sub {
+          font-size: 12px; 
+        }
+        .major {
+          font-size: 14px;
+        }
+      }
+
+      @media only screen and (max-width: 980px) {
+        .imgsize {
+          height: 155px;
+          width: 155px;
+        }
+      }
+      @media only screen and (max-width: 700px) {
+        .imgsize {
+            height: 0;
+            width: 0;    
+        }
+        .nav {
+          background-color: white;
+          overflow: hidden;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          height: 83px;
+          min-width: fit-content;
+        }
+
+        .btn {
+          font-size: 25px;
+        }
+
+        .sticky-top {
+          top: auto;
+        }
+
+        .icon-collapse {
+          display:block !important;
+        }
+        .nav-button {
+          display: flex !important;
+        }
+
+        .profile, .nav-text {
+          display: none !important;
+        }
+
+        .content {
+          width: 100%;
+        }
+      }
+    </style>
+    <title>Virtual Class | Akademis.id</title>
+  </head>
+  <body class="d-flex">
+    <div class="nav d-flex align-items-center p-3 sticky-top">
+      <div class="profile d-flex flex-column align-items-center" style="width: 100%">
+        <img src="../assets/city.jpg" class="rounded-circle imgsize" alt="..." />
+        <h5 class="mt-2 text-center name" style="color:#152c5b; font-weight: 600;">Anggara Bima Surya</h5>
+        <p class="text-center sub" style="color:#BDBCBC; font-weight: bold; margin-bottom: 5px">JURUSAN IMPIAN</p>
+        <p class="text-center major" style="color:#838383;margin-bottom: 1px;">Teknik Informatika</p>
+        <p class="text-center major" style="color:#838383; margin-bottom: 1em">Universitas Indonesia</p>
+      </div>
+      <div class="nav-text d-flex flex-column align-items-center" style="width: 100%">
+        <a class="btn btn-secondary p-2 mb-2" href="dashboard.html"  style="width: 100%; display: block; text-align:left; padding-left: 4.5vw !important;">
+          <i class="bx bxs-dashboard icon-collapse" style="padding-right: 1.1em"></i> Dashboard
+        </a>
+        <a class="btn btn-primary p-2 mb-2" href="dashboard-virtual-class.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+          <span class="iconify icon-collapse" data-icon="ri-artboard-fill" data-inline="false" style="margin-right: 1.1em"></span> Virtual Class
+        </a>
+        <a class="btn btn-secondary p-2 mb-2" href="dashboard-tryout.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+          <span class="iconify icon-collapse" data-icon="ic-baseline-class" data-inline="false" style="margin-right: 1.1em"></span> Tryout
+        </a>
+        <a class="btn btn-secondary p-2 mb-2" href="dashboard-store.html" style="width: 100%; display: block; text-align:left; padding-left: 4.5vw !important;">
+          <span class="iconify icon-collapse" data-icon="fa-solid:store-alt" data-inline="false"  style="margin-right: 1em"></span> Store
+        </a>
+        <a class="btn btn-secondary p-2 mb-2" href="dashboard-profile.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+          <i class="bi bi-person-fill icon-collapse" style="padding-right: 1.1em"></i> Profile
+        </a>
+        <a class="btn btn-secondary p-2 mb-2" href="dashboard-edit-profile.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+          <i class="bi bi-gear-fill icon-collapse"  style="padding-right: 1.1em"></i> Settings
+        </a>
+        <a class="btn btn-outline-secondary p-2 mb-2" href="dashboard-edit-profile.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+          <span class="iconify icon-collapse" data-icon="ic-baseline-logout" data-inline="false"  style="margin-right: 1.1em"></span> Logout
+        </a>
+      </div>
+
+      <!-- Mobile View Only -->
+      <div class="nav-button flex-row mx-auto">
+        <a class="btn btn-secondary mx-3" href="dashboard.html"  style="width: 100%; display: block;">
+          <i class="bx bxs-dashboard"></i>
+        </a>
+        <a class="btn btn-primary mx-3" href="dashboard-virtual-class.html" style="width: 100%; display: block;">
+          <span class="iconify" data-icon="ri-artboard-fill" data-inline="false"></span>
+        </a>
+        <a class="btn btn-secondary mx-3" href="dashboard-tryout.html" style="width: 100%; display: block;">
+          <span class="iconify" data-icon="ic-baseline-class" data-inline="false"></span>
+        </a>
+        <a class="btn btn-secondary mx-3" href="dashboard-store.html" style="width: 100%; display: block;">
+          <span class="iconify" data-icon="fa-solid:store-alt" data-inline="false"></span>
+        </a>
+        <a class="btn btn-secondary mx-3" href="dashboard-profile.html" style="width: 100%; display: block;">
+          <i class="bi bi-person-fill"></i>
+        </a>
+      </div>
+    </div>
+    <div class="content" style="margin-bottom: 6em;">
+      <div class="pt-4 pb-2 d-flex justify-content-between align-items-center">
+        <h1>Virtual Class</h1>
+        <div class="d-flex">
+          <div class="me-4">
+            <h1 style="font-weight: 600; font-size: 1.125rem; color: #152c5b">
+              <!-- icon diamond -->
+              <span class="iconify" data-inline="false" data-icon="mdi:diamond" style="color: #60c1e7; font-size: 30px"></span>500
+            </h1>
+          </div>
+          <div class="me-4">
+            <h1 style="font-weight: 600; font-size: 1.125rem; color: #152c5b">
+              <!-- icon coin -->
+              <span class="iconify" data-inline="false" data-icon="akar-icons:circle-fill" style="color: #e79160; font-size: 30px"></span>500
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="form-outline w-50">
+        <input style="background-color: #f7f8f7; border-radius: 18px; border: none;"
+          type="search"
+          id="form1"
+          class="form-control"
+          placeholder=" Cari Virtual Class"
+          aria-label="Search"
+        />
+      </div>
+
+      <!-- Current Virtual Class -->
+      <div class="container-fluid current-vc mt-5">
+        <h4 class="mb-4"> Virtual Class  Milikmu</h4>
+        <div class="scrolling-wrapper-flexbox">
+          <div class="card" style="width: 25rem; margin-right: 1em;">
+            <div class="card-body">
+                <span class="badge badge-pill badge-danger">NEW!</span>
+                <span class="badge badge-pill badge-primary">PU</span>
+                <h5 class="card-title">Belajar Penalaran Umum: Belajar Bersama!</h5>
+                <p class="card-text">Kamu akan mendapatkan pembahasan mengenai Try Out 7 dari Akademis.id dari mentor yang terpercaya!</p>
+                <div class="p-1 d-flex flex-row">
+                    <div class="profile-container">
+                        <img src="..."></img>
+                    </div>
+                <div>
+                    <p style="margin-left: 1em; font-weight: bold;">Nama Master Teacher</p>
+                    <span class="d-inline-block float-left" style="padding-right: 1em; padding-left: 1em"><i class="icon fas fa-calendar"></i></span>
+                    <span class="d-inline-block">21 November 2021</span>
+                </div>
+              </div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+          <div class="card" style="width: 25rem; margin-right: 1em;">
+            <div class="card-body">
+                <span class="badge badge-pill badge-primary">PU</span>
+                <h5 class="card-title">Belajar Penalaran Umum: Belajar Bersama!</h5>
+                <p class="card-text">Kamu akan mendapatkan pembahasan mengenai Try Out 7 dari Akademis.id dari mentor yang terpercaya!</p>
+                <div class="p-1 d-flex flex-row">
+                    <div class="profile-container">
+                        <img src="..."></img>
+                    </div>
+                <div>
+                    <p style="margin-left: 1em; font-weight: bold;">Nama Master Teacher</p>
+                    <span class="d-inline-block float-left" style="padding-right: 1em; padding-left: 1em"><i class="icon fas fa-calendar"></i></span>
+                    <span class="d-inline-block">21 November 2021</span>
+                </div>
+              </div>
+              <a href="#" class="stretched-link"></a>
+            </div>
+          </div>
+      </div>
+
+      <!-- Past Virtual Class -->
+      <div id="past-vc" class="mt-5 ">
+        <h4>Virtual Class yang Sudah Berlalu</h4>
+        <div class="d-flex flex-wrap">
+            <div class="card" style="width: 25rem; margin-right: 1em; margin-top: 1em;">
+                <div class="card-body">
+                    <span class="badge badge-pill badge-primary">PU</span>
+                    <h5 class="card-title">Belajar Penalaran Umum: Belajar Bersama!</h5>
+                    <p class="card-text">Kamu akan mendapatkan pembahasan mengenai Try Out 7 dari Akademis.id dari mentor yang terpercaya!</p>
+                    <div class="p-1 d-flex flex-row">
+                        <div class="profile-container">
+                            <img src="..."></img>
+                        </div>
+                    <div>
+                        <p style="margin-left: 1em; font-weight: bold;">Nama Master Teacher</p>
+                        <span class="d-inline-block float-left" style="padding-right: 1em; padding-left: 1em"><i class="icon fas fa-calendar"></i></span>
+                        <span class="d-inline-block">21 November 2021</span>
+                    </div>
+                  </div>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="card" style="width: 25rem; margin-right: 1em; margin-top: 1em;">
+                <div class="card-body">
+                    <span class="badge badge-pill badge-primary">PU</span>
+                    <h5 class="card-title">Belajar Penalaran Umum: Belajar Bersama!</h5>
+                    <p class="card-text">Kamu akan mendapatkan pembahasan mengenai Try Out 7 dari Akademis.id dari mentor yang terpercaya!</p>
+                    <div class="p-1 d-flex flex-row">
+                        <div class="profile-container">
+                            <img src="..."></img>
+                        </div>
+                    <div>
+                        <p style="margin-left: 1em; font-weight: bold;">Nama Master Teacher</p>
+                        <span class="d-inline-block float-left" style="padding-right: 1em; padding-left: 1em"><i class="icon fas fa-calendar"></i></span>
+                        <span class="d-inline-block">21 November 2021</span>
+                    </div>
+                  </div>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+              </div>
+              <div class="card" style="width: 25rem; margin-right: 1em; margin-top: 1em;">
+                <div class="card-body">
+                    <span class="badge badge-pill badge-primary">PU</span>
+                    <h5 class="card-title">Belajar Penalaran Umum: Belajar Bersama!</h5>
+                    <p class="card-text">Kamu akan mendapatkan pembahasan mengenai Try Out 7 dari Akademis.id dari mentor yang terpercaya!</p>
+                    <div class="p-1 d-flex flex-row">
+                        <div class="profile-container">
+                            <img src="..."></img>
+                        </div>
+                    <div>
+                        <p style="margin-left: 1em; font-weight: bold;">Nama Master Teacher</p>
+                        <span class="d-inline-block float-left" style="padding-right: 1em; padding-left: 1em"><i class="icon fas fa-calendar"></i></span>
+                        <span class="d-inline-block">21 November 2021</span>
+                    </div>
+                  </div>
+                  <a href="#" class="stretched-link"></a>
+                </div>
+              </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

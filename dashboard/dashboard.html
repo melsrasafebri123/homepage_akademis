@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://code.iconify.design/1/1.0.6/iconify.min.js"
+    ></script>
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <style>
+      .form-control::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: #787c84;
+      }
+      .form-control:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: #787c84;
+      }
+      .form-control::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: #787c84;
+      }
+      .form-control:-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: #787c84;
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        color: #152C5B;
+      }
+      .nav {
+        width: 20%;
+        min-width: 300px;
+        background-color: #E7F2F6;
+        height: 100vh;
+      }
+
+      .nav-button {
+        display: none !important;
+      }
+      .content {
+        width: 80%;
+        padding: 1.5em;
+      }
+
+      .btn-primary {
+        background-color : #60C1E7;
+        border-color: #60C1E7;
+        font-size: 16px;
+        border-radius: 10px;
+      }
+      .btn-primary:hover {
+        background-color : #152C5B;
+      }
+      
+      .btn-secondary {
+        background-color : white;
+        border-color: white;
+        font-size: 16px;
+        color: #838383;
+        border-radius: 10px;
+      }
+      .btn-outline-secondary {
+        border-color: #838383;
+        border-radius: 10px;
+      }
+
+      .name {
+        margin-top: 1em;
+        font-size: 1.5em;
+      }
+      .sub {
+        font-size: .8em; 
+      }
+      .major {
+        font-size: 1.2em;
+      }
+      .imgsize {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        @media only screen and (min-width: 1441px) {
+            .imgsize {
+                height: 240px;
+                width: 240px;
+            }
+        }
+        
+      @media only screen and (max-width: 1440px) {
+        .imgsize {
+          height: 165px;
+          width: 165px;
+        }
+        .name {
+          font-size: 16px;
+        }
+        .sub {
+          font-size: 12px; 
+        }
+        .major {
+          font-size: 14px;
+        }
+      }
+
+      @media only screen and (max-width: 980px) {
+        .imgsize {
+          height: 155px;
+          width: 155px;
+        }
+      }
+      @media only screen and (max-width: 700px) {
+        .imgsize {
+            height: 0;
+            width: 0;    
+        }
+        .nav {
+          overflow: hidden;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+          height: 83px;
+          min-width: fit-content;
+        }
+
+        .btn {
+          font-size: 25px;
+        }
+
+        .sticky-top {
+          top: auto;
+        }
+
+        .icon-collapse {
+          display:block !important;
+        }
+        .nav-button {
+          display: flex !important;
+        }
+
+        .profile, .nav-text {
+          display: none !important;
+        }
+
+        .content {
+          width: 100%;
+        }
+      }
+    </style>
+    <title>Dashboard | Akademis.id</title>
+  </head>
+  <body>
+    <div class="nav d-flex align-items-center p-3 sticky-top">
+      <div class="profile d-flex flex-column align-items-center" style="width: 100%">
+        <img src="../assets/city.jpg" class="rounded-circle imgsize" alt="..." />
+        <h5 class="mt-2 text-center name" style="color:#152c5b; font-weight: 600;">Anggara Bima Surya</h5>
+        <p class="text-center sub" style="color:#BDBCBC; font-weight: bold; margin-bottom: 5px">JURUSAN IMPIAN</p>
+        <p class="text-center major" style="color:#838383;margin-bottom: 1px;">Teknik Informatika</p>
+        <p class="text-center major" style="color:#838383; margin-bottom: 1em">Universitas Indonesia</p>
+      </div>
+      <div class="nav-text d-flex flex-column align-items-center" style="width: 100%">
+        <a class="btn btn-primary p-2 mb-2" href="dashboard.html"  style="width: 100%; display: block; text-align:left; padding-left: 4.5vw !important;">
+          <i class="bx bxs-dashboard icon-collapse" style="padding-right: 1.1em"></i> Dashboard
+        </a>
+        <a class="btn btn-secondary p-2 mb-2" href="dashboard-virtual-class.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+          <span class="iconify icon-collapse" data-icon="ri-artboard-fill" data-inline="false" style="margin-right: 1.1em"></span> Virtual Class
+        </a>
+        <a class="btn btn-secondary p-2 mb-2" href="dashboard-tryout.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+          <span class="iconify icon-collapse" data-icon="ic-baseline-class" data-inline="false" style="margin-right: 1.1em"></span> Tryout
+        </a>
+        <a class="btn btn-secondary p-2 mb-2" href="dashboard-store.html" style="width: 100%; display: block; text-align:left; padding-left: 4.5vw !important;">
+          <span class="iconify icon-collapse" data-icon="fa-solid:store-alt" data-inline="false"  style="margin-right: 1em"></span> Store
+        </a>
+        <a class="btn btn-secondary p-2 mb-2" href="dashboard-profile.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+          <i class="bi bi-person-fill icon-collapse" style="padding-right: 1.1em"></i> Profile
+        </a>
+        <a class="btn btn-secondary p-2 mb-2" href="dashboard-edit-profile.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+          <i class="bi bi-gear-fill icon-collapse"  style="padding-right: 1.1em"></i> Settings
+        </a>
+        <a class="btn btn-outline-secondary p-2 mb-2" href="dashboard-edit-profile.html" style="width: 100%; display: block;  text-align:left; padding-left: 4.5vw !important;">
+          <span class="iconify icon-collapse" data-icon="ic-baseline-logout" data-inline="false"  style="margin-right: 1.1em"></span> Logout
+        </a>
+      </div>
+
+      <!-- Mobile View Only -->
+      <div class="nav-button flex-row mx-auto">
+        <a class="btn btn-primary mx-3" href="dashboard.html"  style="width: 100%; display: block;">
+          <i class="bx bxs-dashboard"></i>
+        </a>
+        <a class="btn btn-secondary mx-3" href="dashboard-virtual-class.html" style="width: 100%; display: block;">
+          <span class="iconify" data-icon="ri-artboard-fill" data-inline="false"></span>
+        </a>
+        <a class="btn btn-secondary mx-3" href="dashboard-tryout.html" style="width: 100%; display: block;">
+          <span class="iconify" data-icon="ic-baseline-class" data-inline="false"></span>
+        </a>
+        <a class="btn btn-secondary mx-3" href="dashboard-store.html" style="width: 100%; display: block;">
+          <span class="iconify" data-icon="fa-solid:store-alt" data-inline="false"></span>
+        </a>
+        <a class="btn btn-secondary mx-3" href="dashboard-profile.html" style="width: 100%; display: block;">
+          <i class="bi bi-person-fill"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="content">
+      <!-- board -->
+      
+        <!-- navbar -->
+        <div class="pt-4 pb-5 d-flex justify-content-between align-items-center">
+          <div class="form-outline w-50">
+            <input style="background-color: #f7f8f7; border-radius: 18px; border: none;"
+              type="search"
+              id="form1"
+              class="form-control"
+              placeholder=" Cari Tryout/ Virtual Class"
+              aria-label="Search"
+            />
+          </div>
+          <div class="d-flex">
+            <div class="me-4">
+              <h1 style="font-weight: 600; font-size: 1.125rem; color: #152c5b">
+                <!-- icon diamond -->
+                <span class="iconify" data-inline="false" data-icon="mdi:diamond" style="color: #60c1e7; font-size: 30px"></span>500
+              </h1>
+            </div>
+            <div>
+              <h1 style="font-weight: 600; font-size: 1.125rem; color: #152c5b">
+                <!-- icon coin -->
+                <span class="iconify" data-inline="false" data-icon="akar-icons:circle-fill" style="color: #e79160; font-size: 30px"></span>500
+              </h1>
+            </div>
+          </div>
+        </div>
+        <!-- board -->
+        <div>
+          <!-- banner -->
+          <div
+            id="carouselExampleControls"
+            class="carousel slide m-auto"
+            style="border-radius: 10px; overflow: hidden; height: 20vh"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../assets/city.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/city.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img src="../assets/city.jpg" class="d-block w-100" alt="..." />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div class="mt-5">
+            <h4 style="font-weight: 700" class="mb-4">
+              Rekomendasi Terbaru Untukmu
+            </h4>
+            <!-- deck -->
+            <div class="d-flex flex-wrap">
+                <!-- card TO -->
+                <div class="card"
+                  style="
+                    width: 18rem;
+                    border-radius: 20px;
+                    border: none;
+                    overflow: hidden;
+                    background-color: #f7f8f7;
+                    min-height: 361px;
+                    margin-right: 1em; margin-top: 1em;
+                  "
+                >
+                  <div
+                    style="
+                      background-color: #e76060;
+                      border-radius: 90px;
+                      right: 4%;
+                      top: 4%;
+                    "
+                    class="d-inline-block px-4 py-2 mb-3 position-absolute"
+                  >
+                    <h6
+                      style="
+                        font-size: 0.875rem;
+                        font-weight: 700;
+                        color: #fff;
+                        margin: auto;
+                      "
+                    >
+                      NEW!
+                    </h6>
+                  </div>
+                  <img
+                    src="../assets/city.jpg"
+                    class="card-img-top"
+                    style="width: 100%; height: 173px; object-fit: cover"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <div
+                      style="background-color: #e79160; border-radius: 90px"
+                      class="d-inline-block px-4 py-2 mb-3"
+                    >
+                      <h6
+                        style="
+                          font-size: 0.875rem;
+                          font-weight: 700;
+                          color: #fff;
+                          margin: auto;
+                        "
+                      >
+                        SAINTEK
+                      </h6>
+                    </div>
+                    <h4 style="font-weight: 700" class="mb-4">Tryout PTN 1</h4>
+                    <div class="row">
+                      <div class="col-1">
+                        <!-- timeline icon -->
+                        <svg width="16" height="48" viewBox="0 0 16 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="8" cy="8" r="6.5" stroke="#60C1E7" stroke-width="3"/>
+                          <circle cx="8" cy="40" r="6.5" stroke="#60C1E7" stroke-width="3"/>
+                          <rect x="6" y="15" width="3" height="18" fill="#60C1E7"/>
+                        </svg>
+                      </div>
+                      <div class="col-8">
+                        <h6>4 Desember 2021</h6>
+                        <h6>6 Maret 2021</h6>
+                      </div>
+                      <div class="col">
+                        <h6>
+                          <span
+                            class="iconify me-1"
+                            data-inline="false"
+                            data-icon="mdi:diamond"
+                            style="color: #60c1e7; font-size: 30px"
+                          ></span
+                          >2
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- card TO -->
+                <div
+                  class="card"
+                  style="
+                    width: 18rem;
+                    border-radius: 20px;
+                    border: none;
+                    overflow: hidden;
+                    background-color: #f7f8f7;
+                    min-height: 361px;
+                    margin-right: 1em; margin-top: 1em;
+                  "
+                >
+                  <div
+                    style="
+                      background-color: #e76060;
+                      border-radius: 90px;
+                      right: 4%;
+                      top: 4%;
+                    "
+                    class="d-inline-block px-4 py-2 mb-3 position-absolute"
+                  >
+                    <h6
+                      style="
+                        font-size: 0.875rem;
+                        font-weight: 700;
+                        color: #fff;
+                        margin: auto;
+                      "
+                    >
+                      NEW!
+                    </h6>
+                  </div>
+                  <img
+                    src="../assets/city.jpg"
+                    class="card-img-top"
+                    style="width: 100%; height: 173px; object-fit: cover"
+                    alt="..."
+                  />
+                  <div class="card-body">
+                    <div
+                      style="background-color: #e79160; border-radius: 90px"
+                      class="d-inline-block px-4 py-2 mb-3"
+                    >
+                      <h6
+                        style="
+                          font-size: 0.875rem;
+                          font-weight: 700;
+                          color: #fff;
+                          margin: auto;
+                        "
+                      >
+                        SAINTEK
+                      </h6>
+                    </div>
+                    <h4 style="font-weight: 700" class="mb-4">Tryout PTN 1</h4>
+                    <div class="row">
+                      <div class="col-1">
+                        <!-- timeline icon -->
+                        <svg
+                          width="16"
+                          height="48"
+                          viewBox="0 0 16 48"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="8"
+                            cy="8"
+                            r="6.5"
+                            stroke="#60C1E7"
+                            stroke-width="3"
+                          />
+                          <circle
+                            cx="8"
+                            cy="40"
+                            r="6.5"
+                            stroke="#60C1E7"
+                            stroke-width="3"
+                          />
+                          <rect
+                            x="6"
+                            y="15"
+                            width="3"
+                            height="18"
+                            fill="#60C1E7"
+                          />
+                        </svg>
+                      </div>
+                      <div class="col-8">
+                        <h6>4 Desember 2021</h6>
+                        <h6>6 Maret 2021</h6>
+                      </div>
+                      <div class="col">
+                        <h6>
+                          <span
+                            class="iconify me-1"
+                            data-inline="false"
+                            data-icon="mdi:diamond"
+                            style="color: #60c1e7; font-size: 30px"
+                          ></span
+                          >2
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card Kelas -->
+                <div
+                  class="card ps-2"
+                  style="
+                    width: 18rem;
+                    border-radius: 20px;
+                    border: 2px;
+                    overflow: hidden;
+                    background-color: #f7f8f7;
+                    min-height: 361px;
+                    margin-right: 1em; margin-top: 1em;
+                  "
+                >
+                  <div
+                    style="
+                      background-color: #e76060;
+                      border-radius: 90px;
+                      right: 4%;
+                      top: 4%;
+                    "
+                    class="d-inline-block px-4 py-2 mb-3 position-absolute"
+                  >
+                    <h6
+                      style="
+                        font-size: 0.875rem;
+                        font-weight: 700;
+                        color: #fff;
+                        margin: auto;
+                      "
+                    >
+                      NEW!
+                    </h6>
+                  </div>
+
+                  <div class="card-body mt-5">
+                    <h4 style="font-weight: 700" class="">
+                      Belajar Penalaran Umum: Belajar Bersama!
+                    </h4>
+                    <!-- Tag -->
+                    <div
+                      style="background-color: #60c1e7; border-radius: 90px"
+                      class="d-inline-block px-4 py-2"
+                    >
+                      <h6
+                        style="
+                          font-size: 0.875rem;
+                          font-weight: 700;
+                          color: #fff;
+                          margin: auto;
+                        "
+                      >
+                        PU
+                      </h6>
+                    </div>
+                    <div class="row position-absolute w-100" style="bottom: 5%">
+                      <div class="col-8">
+                        <h6 style="font-weight: 700">Darlene Robertson</h6>
+                        <h6>6 Desember 2021</h6>
+                      </div>
+                      <div class="col">
+                        <h6 class="">
+                          <span
+                            class="iconify me-1"
+                            data-inline="false"
+                            data-icon="mdi:diamond"
+                            style="color: #60c1e7; font-size: 30px"
+                          ></span
+                          >2
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>
