@@ -90,6 +90,11 @@
       right: -50px;
       background-color: #152C5B;
       color: white;
+      padding-left: 20px;
+    }
+
+    body{
+      overflow-x: hidden;
     }
 
     @media only screen and (max-width: 1000px) {
@@ -112,10 +117,13 @@
       .align_center {
         align-items: center;
       }
+
+      body{
+        overflow-x: hidden;
+      }
+
     }
-    body{
-      overflow-x: hidden;
-    }
+}
   </style>
 </head>
 
@@ -192,7 +200,7 @@
       <div class="w-full max-w-lg mr-auto lg:mx-0 center_text margin_auto">
         <h2 class="mt-10 lg:text-left text-3xl lg:text-4xl mb-8 font-bold" style='color: #60C1E7;'>TryOut Gak Pake
           Ribet!</h2>
-        <p class="lg:text-left text-base lg:text-lg">Latih dan uji kemampuan kamu menghadapi UTBK dan seleksi masuk
+        <p class="lg:text-left text-base lg:text-lgf">Latih dan uji kemampuan kamu menghadapi UTBK dan seleksi masuk
           perguruan tinggi dengan soal-soal pilihan
           berkualitas tinggi, sistem penilaian IRT yang sama seperti UTBK aslinya, dan bonus gratis pembahasan
           komprehensif yang bakalan membantu kamu menjadi #SuperAkademian!</p>
@@ -236,122 +244,100 @@
       </div>
     </div>
 
-    <h2 class="font-bold mb-3 mx-auto px-5 text-center text-lg lg:text-3xl w-6/12">Apa Yang Mereka Katakan Tentang Akademis
+    <h2 class="font-extrabold mb-3 mx-auto px-5 text-center text-xl lg:text-3xl" style="font-family:'Poppins'">Apa Kata Akademian Tentang <br> Akademis?
     </h2>
     <p class="text-base text-center mb-6">Pengalaman Akademian belajar bersama Akademis </p>
     <div class="main-carousel w-10/12 mx-auto mb-20" style="width: 80%;"
       data-flickity='{ "cellAlign": "center", "contain": false, "autoPlay": true, "adaptiveHeight": true }'>
-      <!-- <div class="testi">
-        <div class="carousel-cell flex flex-col justify-center items-center px-0 lg:px-20">
-          <h2 class="text-2xl font-bold	" style="color: #1F78B4;">Brillian</h2>
-          <p class="flex"><span class="iconify text-2xl mr-1" data-inline="false"
-              data-icon="ant-design:instagram-filled"></span>@sth_brillian27</p>
-          <p>FMIPA ITB</p>
-          <p> SMAN 8 Bandung</p>
-          <i>Akademis sangat membantu sekali, memiliki soal Try Out yang cukup menantang, sehingga kita dapat mengetahui
-            kemampuan kita dan dapat mempelajarinya di pembahasan, dan juga ada perangkingannya yang membuat kita semakin
-            semangat untuk bersaing dengan yang lain.</i>
+      
+      <div class="carousel-cell flex flex-col grid md:grid-cols-2 gap-4 mx-auto mb-4 p-1 md:p-6" style="text-align: left;">
+        <div class="p-6 rounded-2xl" style="position: relative; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);">
+          <div class="" style="position: absolute; left: 1rem; top: 2rem; z-index: -1;"><p class="text-6xl font-bold translate-x-2" style="color: #60C1E7;">"</p></div>
+          <p class="text-xs lg:px-4 pt-8">Akademis sangat membantu sekali memiliki soal tryout yang cukup menantang, sehingga kita dapat mengetahui kemampuan kita dan dapat mempelejarinya di pembahasan, dan juga ada perangkingannya yang membuat kita semakin semangat untuk bersaing dengan yang lain</p>
+          <p class="text-6xl font-bold" style="text-align: right; color: #60C1E7;">"</p>
+          <div class="mx-auto lg:mt-8">
+            <img src="../assets/profile.jpeg" alt="" class="rounded-full w-20 mr-2 -mt-2" style="float: left;">
+            <p class="font-extrabold">Brillian</p>
+            <p class="text-xs">Fakultas Matematika dan Ilmu Pengetahuan Alam - Institut Teknologi Bandung</p>
+          </div>
         </div>
-        <div class="carousel-cell flex flex-col justify-center items-center px-0 lg:px-20">
-          <h2 class="text-2xl font-bold	" style="color: #1F78B4;">Stefanus Gunawan</h2>
-          <p class="flex"><span class="iconify text-2xl mr-1" data-inline="false"
-              data-icon="ant-design:instagram-filled"></span>-</p>
-          <p>FTSL Ganesha ITB</p>
-          <p>SMA Kanisius</p>
-          <i>TO Akademis sangat bagus karena soalnya benar-benar konseptual dan bukan hanya asal jadi, sehingga kemampuan
-            pengguna Akademis benar-benar diuji semaksimal mungkin. Selain itu, pembahasan yang lengkap dan jelas
-            menjadikan Akademis sangat worth it karena bisa membangun kemampuan penggunanya secara berkesinambungan dan
-            terstruktur. Tampilan web Akademis pun cukup baik dan nyaman untuk digunakan. Akademis is the best!
-          </i>
+        <div class="p-6 rounded-2xl" style="position: relative; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);">
+          <div class="" style="position: absolute; left: 1rem; top: 2rem; z-index: -1;"><p class="text-6xl font-bold translate-x-2" style="color: #60C1E7;">"</p></div>
+          <p class="text-xs lg:px-4 pt-8">Try Out yang disediakan dari platform akademis ini cukup membantu banget sih buat aku untuk latihan soal soal sebelum UTBK. Awalnya pas aku ikut pertama kali tryoutnya lumayan beda sama platform yang pernah aku ikutin sebelumnya tapi ternyata tryout dari akademis ini hampir mirip dengan tipe soal UTBK di tahun 2020. Pokoknya platform ini cocok banget deh buat adek adek</p>
+          <p class="text-6xl font-bold" style="text-align: right; color: #60C1E7;">"</p>
+          <div class="mx-auto">
+            <img src="../assets/profile.jpeg" alt="" class="rounded-full w-20 mr-2 -mt-2" style="float: left;">
+            <p class="font-extrabold">Intan</p>
+            <p class="text-xs">Ekonomi, Keuangan dan Perbankan - Universitas Brawijaya</p>
+          </div>
         </div>
-        <div class="carousel-cell flex flex-col justify-center items-center px-0 lg:px-20">
-          <h2 class="text-2xl font-bold	" style="color: #1F78B4;">Bernadetta Azalia
-          </h2>
-          <p class="flex"><span class="iconify text-2xl mr-1" data-inline="false"
-              data-icon="ant-design:instagram-filled"></span>@bernadettazalia</p>
-          <p>FK UNS</p>
-          <p>SMAN 3 Surakarta</p>
-          <i>Hai! Akademis membantu aku banget buat latihan soal nih. Dari soal mudah sampai susah semuanya ada, jadi pas
-            UTBK tidak kaget lagi. Semoga sukses terus akademis, bisa membantu lebih banyak orang lagi dalam belajar dan
-            berproses! Terima kasih sudah menjadi bagian dari perjalananku menggapai cita-cita:))</i>
+      </div>
+      <div class="carousel-cell flex flex-col grid md:grid-cols-2 gap-4 mx-auto mb-4 p-1 md:p-6" style="text-align: left;">
+        <div class="p-6 rounded-2xl" style="position: relative; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);">
+          <div class="" style="position: absolute; left: 1rem; top: 2rem; z-index: -1;"><p class="text-6xl font-bold translate-x-2" style="color: #60C1E7;">"</p></div>
+          <p class="text-xs lg:px-4 pt-8">Akademis sangat membantu sekali memiliki soal tryout yang cukup menantang, sehingga kita dapat mengetahui kemampuan kita dan dapat mempelejarinya di pembahasan, dan juga ada perangkingannya yang membuat kita semakin semangat untuk bersaing dengan yang lain</p>
+          <p class="text-6xl font-bold" style="text-align: right; color: #60C1E7;">"</p>
+          <div class="mx-auto lg:mt-8">
+            <img src="../assets/profile.jpeg" alt="" class="rounded-full w-20 mr-2 -mt-2" style="float: left;">
+            <p class="font-extrabold">Brillian</p>
+            <p class="text-xs">Fakultas Matematika dan Ilmu Pengetahuan Alam - Institut Teknologi Bandung</p>
+          </div>
         </div>
-        <div class="carousel-cell flex flex-col justify-center items-center px-0 lg:px-20">
-          <h2 class="text-2xl font-bold	" style="color: #1F78B4;">Dewa Sunandar</h2>
-          <p class="flex"><span class="iconify text-2xl mr-1" data-inline="false"
-              data-icon="ant-design:instagram-filled"></span>@bakwankawee</p>
-          <p>Ilmu Aktuaria UGM</p>
-          <p>SMAN 6 Yogyakarta</p>
-          <i>Soal TO nya yang HOTS beneran nggak ada lawan, sistem penilaian nya juga transparan, dan udah pake IRT juga
-            jadi recommended banget.</i>
+        <div class="p-6 rounded-2xl" style="position: relative; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);">
+          <div class="" style="position: absolute; left: 1rem; top: 2rem; z-index: -1;"><p class="text-6xl font-bold translate-x-2" style="color: #60C1E7;">"</p></div>
+          <p class="text-xs lg:px-4 pt-8">Try Out yang disediakan dari platform akademis ini cukup membantu banget sih buat aku untuk latihan soal soal sebelum UTBK. Awalnya pas aku ikut pertama kali tryoutnya lumayan beda sama platform yang pernah aku ikutin sebelumnya tapi ternyata tryout dari akademis ini hampir mirip dengan tipe soal UTBK di tahun 2020. Pokoknya platform ini cocok banget deh buat adek adek</p>
+          <p class="text-6xl font-bold" style="text-align: right; color: #60C1E7;">"</p>
+          <div class="mx-auto">
+            <img src="../assets/profile.jpeg" alt="" class="rounded-full w-20 mr-2 -mt-2" style="float: left;">
+            <p class="font-extrabold">Intan</p>
+            <p class="text-xs">Ekonomi, Keuangan dan Perbankan - Universitas Brawijaya</p>
+          </div>
         </div>
-        <div class="carousel-cell flex flex-col justify-center items-center px-0 lg:px-20">
-          <h2 class="text-2xl font-bold	" style="color: #1F78B4;">Gabriella Josephine</h2>
-          <p class="flex"><span class="iconify text-2xl mr-1" data-inline="false"
-              data-icon="ant-design:instagram-filled"></span>@josephinegaby</p>
-          <p>Hukum UI</p>
-          <p>SMAN 68 Jakarta</p>
-          <i>Kebanyakan tryout online yang diadain itu suka bikin sakit mata tetapi, kalo tryout di akademis engga!!
-            webnya bagus banget jadi pas ngerjain tidak bikin sakit mata, terus kualitas soal yang diberikan akademis juga
-            bagus!! banyak soal hots yang bikin kita nalar dan berpikir gitu lalu penilaian sistem IRT juga rasional
-            banget menurut aku. Pokoknya akademis udah keren banget. Terima kasih ya akademis berkat kamu aku bisa jadi
-            maba univ dan jurusan impian aku!!</i>
+      </div>
+      <!-- <div class="carousel-cell flex flex-col grid grid-cols-2 gap-4 mx-auto mb-4 lg:p-4" style="text-align: left;">
+        <div class="lg:p-6 rounded-2xl" style="position: relative; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);">
+          <div class="" style="position: absolute; left: 2rem; top: 2rem; z-index: -1;"><p class="text-6xl font-bold translate-x-2" style="color: #60C1E7;">"</p></div>
+          <p class="text-xs lg:px-4 pt-8">Akademis sangat membantu sekali memiliki soal tryout yang cukup menantang, sehingga kita dapat mengetahui kemampuan kita dan dapat mempelejarinya di pembahasan, dan juga ada perangkingannya yang membuat kita semakin semangat untuk bersaing dengan yang lain</p>
+          <p class="text-6xl font-bold" style="text-align: right; color: #60C1E7;">"</p>
+          <div class="mx-auto lg:mt-8">
+            <img src="../assets/profile.jpeg" alt="" class="rounded-full w-20 mr-2 -mt-2" style="float: left;">
+            <p class="font-extrabold">Brillian</p>
+            <p class="text-xs">Fakultas Matematika dan Ilmu Pengetahuan Alam - Institut Teknologi Bandung</p>
+          </div>
         </div>
-        <div class="carousel-cell flex flex-col justify-center items-center px-0 lg:px-20">
-          <h2 class="text-2xl font-bold	" style="color: #1F78B4;">Intan Nur Hanifah</h2>
-          <p class="flex"><span class="iconify text-2xl mr-1" data-inline="false"
-              data-icon="ant-design:instagram-filled"></span>@camabaub_20</p>
-          <p>Ekonomi, Keuangan, dan Perbankan Universitas Brawijaya</p>
-          <p>SMAN 2 Mengwi</p>
-          <i> Try Out yang disediakan dari platform akademis ini cukup membantu banget sih buat aku untuk latihan
-            soal-soal sebelum utbk. Awalnya pas aku ikut pertama kali tryoutnya itu lumayan beda sama platform yang pernah
-            aku ikutin sebelumnya tapi ternyata soal tryout dari akademis ini yang hampir mirip dengan tipe soal utbk di
-            tahun 2020. Pokoknya platform ini cocok banget deh buat adek-adek yang bakalan ikut utbk di tahun depan</i>
+        <div class="lg:p-7 rounded-2xl" style="position: relative; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); ">
+          <div class="" style="position: absolute; left: 2rem; top: 2rem; z-index: -1;"><p class="text-6xl font-bold translate-x-2" style="color: #60C1E7;">"</p></div>
+          <p class="text-xs lg:px-4 pt-8">Try Out yang disediakan dari platform akademis ini cukup membantu banget sih buat aku untuk latihan soal soal sebelum UTBK. Awalnya pas aku ikut pertama kali tryoutnya lumayan beda sama platform yang pernah aku ikutin sebelumnya tapi ternyata tryout dari akademis ini hampir mirip dengan tipe soal UTBK di tahun 2020. Pokoknya platform ini cocok banget deh buat adek adek</p>
+          <p class="text-6xl font-bold" style="text-align: right; color: #60C1E7;">"</p>
+          <div class="mx-auto">
+            <img src="../assets/profile.jpeg" alt="" class="rounded-full w-20 mr-2 -mt-2" style="float: left;">
+            <p class="font-extrabold">Intan</p>
+            <p class="text-xs">Ekonomi, Keuangan dan Perbankan - Universitas Brawijaya</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-cell flex flex-col grid grid-cols-2 gap-4 mx-auto mb-4 lg:p-4" style="text-align: left;">
+        <div class="lg:p-6 rounded-2xl" style="position: relative; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);">
+          <div class="" style="position: absolute; left: 2rem; top: 2rem; z-index: -1;"><p class="text-6xl font-bold translate-x-2" style="color: #60C1E7;">"</p></div>
+          <p class="text-xs lg:px-4 pt-8">Akademis sangat membantu sekali memiliki soal tryout yang cukup menantang, sehingga kita dapat mengetahui kemampuan kita dan dapat mempelejarinya di pembahasan, dan juga ada perangkingannya yang membuat kita semakin semangat untuk bersaing dengan yang lain</p>
+          <p class="text-6xl font-bold" style="text-align: right; color: #60C1E7;">"</p>
+          <div class="mx-auto lg:mt-8">
+            <img src="../assets/profile.jpeg" alt="" class="rounded-full w-20 mr-2 -mt-2" style="float: left;">
+            <p class="font-extrabold">Brillian</p>
+            <p class="text-xs">Fakultas Matematika dan Ilmu Pengetahuan Alam - Institut Teknologi Bandung</p>
+          </div>
+        </div>
+        <div class="lg:p-7 rounded-2xl" style="position: relative; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); ">
+          <div class="" style="position: absolute; left: 2rem; top: 2rem; z-index: -1;"><p class="text-6xl font-bold translate-x-2" style="color: #60C1E7;">"</p></div>
+          <p class="text-xs lg:px-4 pt-8">Try Out yang disediakan dari platform akademis ini cukup membantu banget sih buat aku untuk latihan soal soal sebelum UTBK. Awalnya pas aku ikut pertama kali tryoutnya lumayan beda sama platform yang pernah aku ikutin sebelumnya tapi ternyata tryout dari akademis ini hampir mirip dengan tipe soal UTBK di tahun 2020. Pokoknya platform ini cocok banget deh buat adek adek</p>
+          <p class="text-6xl font-bold" style="text-align: right; color: #60C1E7;">"</p>
+          <div class="mx-auto">
+            <img src="../assets/profile.jpeg" alt="" class="rounded-full w-20 mr-2 -mt-2" style="float: left;">
+            <p class="font-extrabold">Intan</p>
+            <p class="text-xs">Ekonomi, Keuangan dan Perbankan - Universitas Brawijaya</p>
+          </div>
         </div>
       </div> -->
-      <div class="carousel-cell flex flex-col grid grid-cols-2 gap-4 mx-auto mb-4 md:p-4" style="text-align: left;">
-        <div class="md:p-6 rounded-2xl" style="position: relative; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);">
-          <div class="" style="position: absolute; left: 2rem; top: 2rem; z-index: -1;"><p class="text-6xl font-bold translate-x-2" style="color: #60C1E7;">"</p></div>
-          <p class="text-xs md:px-4 pt-8">Akademis sangat membantu sekali memiliki soal tryout yang cukup menantang, sehingga kita dapat mengetahui kemampuan kita dan dapat mempelejarinya di pembahasan, dan juga ada perangkingannya yang membuat kita semakin semangat untuk bersaing dengan yang lain</p>
-          <p class="text-6xl font-bold" style="text-align: right; color: #60C1E7;">"</p>
-          <div class="mx-auto md:mt-8">
-            <img src="../assets/profile.jpeg" alt="" class="rounded-full w-20 mr-2 -mt-2" style="float: left;">
-            <p class="font-extrabold">Brillian</p>
-            <p class="text-xs">Fakultas Matematika dan Ilmu Pengetahuan Alam - Institut Teknologi Bandung</p>
-          </div>
-        </div>
-        <div class="md:p-7 rounded-2xl" style="position: relative; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); ">
-          <div class="" style="position: absolute; left: 2rem; top: 2rem; z-index: -1;"><p class="text-6xl font-bold translate-x-2" style="color: #60C1E7;">"</p></div>
-          <p class="text-xs md:px-4 pt-8">Try Out yang disediakan dari platform akademis ini cukup membantu banget sih buat aku untuk latihan soal soal sebelum UTBK. Awalnya pas aku ikut pertama kali tryoutnya lumayan beda sama platform yang pernah aku ikutin sebelumnya tapi ternyata tryout dari akademis ini hampir mirip dengan tipe soal UTBK di tahun 2020. Pokoknya platform ini cocok banget deh buat adek adek</p>
-          <p class="text-6xl font-bold" style="text-align: right; color: #60C1E7;">"</p>
-          <div class="mx-auto">
-            <img src="../assets/profile.jpeg" alt="" class="rounded-full w-20 mr-2 -mt-2" style="float: left;">
-            <p class="font-extrabold">Intan</p>
-            <p class="text-xs">Ekonomi, Keuangan dan Perbankan - Universitas Brawijaya</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-cell flex flex-col grid grid-cols-2 gap-4 mx-auto mb-4 md:p-4" style="text-align: left;">
-        <div class="md:p-6 rounded-2xl" style="position: relative; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);">
-          <div class="" style="position: absolute; left: 2rem; top: 2rem; z-index: -1;"><p class="text-6xl font-bold translate-x-2" style="color: #60C1E7;">"</p></div>
-          <p class="text-xs md:px-4 pt-8">Akademis sangat membantu sekali memiliki soal tryout yang cukup menantang, sehingga kita dapat mengetahui kemampuan kita dan dapat mempelejarinya di pembahasan, dan juga ada perangkingannya yang membuat kita semakin semangat untuk bersaing dengan yang lain</p>
-          <p class="text-6xl font-bold" style="text-align: right; color: #60C1E7;">"</p>
-          <div class="mx-auto md:mt-8">
-            <img src="../assets/profile.jpeg" alt="" class="rounded-full w-20 mr-2 -mt-2" style="float: left;">
-            <p class="font-extrabold">Brillian</p>
-            <p class="text-xs">Fakultas Matematika dan Ilmu Pengetahuan Alam - Institut Teknologi Bandung</p>
-          </div>
-        </div>
-        <div class="md:p-7 rounded-2xl" style="position: relative; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); ">
-          <div class="" style="position: absolute; left: 2rem; top: 2rem; z-index: -1;"><p class="text-6xl font-bold translate-x-2" style="color: #60C1E7;">"</p></div>
-          <p class="text-xs md:px-4 pt-8">Try Out yang disediakan dari platform akademis ini cukup membantu banget sih buat aku untuk latihan soal soal sebelum UTBK. Awalnya pas aku ikut pertama kali tryoutnya lumayan beda sama platform yang pernah aku ikutin sebelumnya tapi ternyata tryout dari akademis ini hampir mirip dengan tipe soal UTBK di tahun 2020. Pokoknya platform ini cocok banget deh buat adek adek</p>
-          <p class="text-6xl font-bold" style="text-align: right; color: #60C1E7;">"</p>
-          <div class="mx-auto">
-            <img src="../assets/profile.jpeg" alt="" class="rounded-full w-20 mr-2 -mt-2" style="float: left;">
-            <p class="font-extrabold">Intan</p>
-            <p class="text-xs">Ekonomi, Keuangan dan Perbankan - Universitas Brawijaya</p>
-          </div>
-        </div>
-      </div>
       <!-- <div class="grid grid-cols-5 gap-5 w-20" style="background-color: #60C1E7;">
       </div> -->
     </div>
@@ -367,9 +353,9 @@
       <p class="font-bold mx-auto text-xl align_center">Unduh segera aplikasi Akademis sekarang!</p>
       <div class="d-flex justify-content-between m-auto not_reverse align_center" style="width: 100%; max-width: 900px;">
         <a href="https://play.google.com/store/apps/details?id=com.akademis&hl=en&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
-          <img class="mt-10 -ml-5"style="max-width: 15rem" alt="Temukan di Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/id_badge_web_generic.png" class="object-contain w-full max-w-xs"/>
+          <img align="left" class="mt-10 -ml-4 mb-3 mr-16 pr-4"style="max-width: 15rem" alt="Temukan di Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/id_badge_web_generic.png" class="object-contain w-full max-w-xs"/>
         </a>
-        <img src="../assets/app.png" alt="" class="w-auto transform translate-x-32 mb-4">
+        <img src="../assets/app.png" alt="" class="lg:w-auto transform lg:translate-x-20 mb-4 translate-x-32 sm:translate-x-60">
       </div>
     </div>
   </div>
