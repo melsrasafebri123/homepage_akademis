@@ -44,34 +44,6 @@
       color: #152C5B;
     }
 
-    .relative {
-      position: relative;
-      height: 100vh;
-      background-image: url(../assets/jumbotron.svg);
-      background-size: cover;
-    }
-
-    .absolute {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .hero_wrapper {
-      margin: auto;
-      display: flex;
-      width: 100%;
-      max-width: 25rem;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .fixed-top {
-      position: fixed;
-      top: 0;
-    }
-
     .carousel-cell {
       width: 100%;
       /* half-width */
@@ -159,14 +131,112 @@
       </div>
     </div>
   </nav>
-  <div class="relative">
-    <div class="absolute hero_wrapper">
-      <h1 class="text-white	text-3xl lg:text-5xl">Akademis.id</h1>
-      <h5 class="text-white	text-xl lg:text-2xl">Building The Next Level Students</h5>
+  <div
+  class="
+    sm:max-w-screen sm:pt-20
+    md:px-32
+    lg:px-40
+    md:pb-40 md:grid md:grid-cols-2
+  "
+  style="background-color: #e7f2f6"
+>
+  <div class="sm:w-full sm:max-w-lg lg:text-center m-auto">
+    <h2
+      class="mx-4 text-left text-3xl lg:text-4xl mb-8 font-bold"
+      style="color: #152c5b"
+    >
+      Belajar UTBK seru bareng Akademis!
+    </h2>
+    <div>
+      <p class="mx-4 lg:text-left text-base lg:text-lg">
+        Persiapkan UTBK mu bersama Akademis melalui Try Out yang dapat
+        mengasah kemampuanmu dan Virtual Class yang dapat membuatmu dapat
+        memahami materi lebih baik lagi
+      </p>
+    </div>
+    <br />
+    <div class="text-center">
+      <div
+        class="
+          inline-block
+          sm:block
+          mx-1
+          sm:text-center sm:my-6
+          md:text-left
+        "
+      >
+        <a href="#">
+          <input class="p-2 rounded-xl hover:bg-red-700 ml-4" type="button" value="Yuk, Daftar Sekarang"
+          style="background-color: #E79160; color: #ffffff;">
+        </a>
+      </div>
+      <div
+        class="
+          inline-block
+          sm:block
+          mx-1
+          sm:text-center sm:my-6
+          md:text-left
+        "
+      >
+        <a href="#">
+          <input class="p-2 rounded-xl -mt-3 ml-4" type="button" value="Sudah Punya Akun"
+          style="color: #E79160; background-color: #ffffff; border: 1px solid #E79160;">
+        </a>
+      </div>
     </div>
   </div>
-
-  <div class="container-fluid px-3 py-3">
+  <div class="px-14 sm:px-4 mt-10 sm:text-center sm:mx-4 sm:my-auto">
+    <img class="w-full object-contain" src="../assets/Group 322.png" />
+  </div>
+</div>
+  <div
+    class="
+      relative
+      md:-top-32
+      bg-white
+      text-center
+      rounded-xl
+      mx-32
+      border-2
+      sm:border-gray-200
+      border-gray-800
+    "
+  >
+    <h2
+      class="mx-4 text-2xl lg:text-3xl py-6 font-bold"
+      style="color: #152c5b"
+    >
+      Kenapa harus pakai Akademis?
+    </h2>
+    <div class="flex flex-wrap grid sm:grid-cols-3 pb-10">
+      <div class="px-10">
+        <img class="mx-auto" src="../assets/people.png" />
+        <p>
+          <span class="text-yellow-500 font-bold text-xl">200</span
+          ><span class="font-bold text-xl">rb+</span><br />Pelajar Indonesia
+          telah menggunakan Akademis.id
+        </p>
+      </div>
+      <div class="px-10">
+        <img class="mx-auto" src="../assets/reward.png" />
+        <p>
+          <span class="text-yellow-500 font-bold text-xl">9.2</span
+          ><span class="font-bold text-xl">/10</span><br />Nilai terhadap
+          tingkat kepuasan penggunaan produk oleh pelajar
+        </p>
+      </div>
+      <div class="px-10">
+        <img class="mx-auto" src="../assets/star.png" />
+        <p>
+          <span class="text-yellow-500 font-bold text-xl">4.5</span
+          ><span class="font-bold text-xl">/5</span><br />Rating aplikasi
+          Akademis.id yang berada di Playstore
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid px-3 py-3 md:-mt-36">
     <div class="w-full max-w-screen-lg my-10 mx-auto flex justify-between reverse">
       <div class="w-full max-w-lg mr-auto lg:mx-0 center_text margin_auto">
         <h2 class="mt-10 lg:text-left text-3xl lg:text-4xl mb-8 font-bold" style='color: #60C1E7;'>TryOut Gak Pake
@@ -175,8 +245,10 @@
           perguruan tinggi dengan soal-soal pilihan
           berkualitas tinggi, sistem penilaian IRT yang sama seperti UTBK aslinya, dan bonus gratis pembahasan
           komprehensif yang bakalan membantu kamu menjadi #SuperAkademian!</p>
-        <input class="p-2 rounded-xl mt-4" type="button" value="Lihat Selengkapnya"
-          style="background-color: #E79160; color: #ffffff;">
+          <a href="tryout.html">
+            <input class="p-2 rounded-xl mt-4" type="button" value="Lihat Selengkapnya"
+            style="background-color: #E79160; color: #ffffff;">
+          </a>
       </div>
       <div style="text-align: center">
         <img class="object-contain w-full max-w-xs mx-auto lg:mx-0 mt-10" src="../assets/ribet.png" alt="">
@@ -194,8 +266,10 @@
           ahlinya? Virtual Class Akademis hadir untuk
           menemani kamu belajar dengan teacher yang super berkualitas dan tentunya super seru serta bisa kamu
           tanya-tanyain apapun soal UTBK dan hal-hal perambisan duniawi lainnya!</p>
-        <input class="p-2 rounded-xl mt-4" type="button" value="Lihat Selengkapnya"
-          style="background-color: #E79160; color: #ffffff;">
+        ` <a href="virtual-class.html">
+            <input class="p-2 rounded-xl mt-4 -ml-2" type="button" value="Lihat Selengkapnya"
+            style="background-color: #E79160; color: #ffffff;">
+          </a>
       </div>
     </div>
 
@@ -207,8 +281,10 @@
           kamu dengan sebuah sistem supercomputer yang
           bisa memprediksi peluang kamu masuk di jurusan impian kamu dengan analisis data yang komprehensif dan
           reliable!</p>
-        <input class="p-2 rounded-xl mt-4" type="button" value="Lihat Selengkapnya"
-          style="background-color: #E79160; color: #ffffff;">
+          <a href="#">
+            <input class="p-2 rounded-xl mt-4" type="button" value="Lihat Selengkapnya"
+              style="background-color: #E79160; color: #ffffff;">
+          </a>
       </div>
       <div style="text-align: center">
         <img class="object-contain w-full max-w-xs mx-auto lg:mx-0 mt-10" src="../assets/klik.png" alt="">
